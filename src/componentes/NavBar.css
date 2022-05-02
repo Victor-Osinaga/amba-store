@@ -1,0 +1,200 @@
+/* nav */
+
+body {
+  overflow: hidden;
+}
+a{
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+#nav {
+  background-color: red;
+  width: 100%;
+  height: 2.8rem;
+}
+
+.nav__Container {
+  max-width: 80vw;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* NAV LOGO */
+
+.nav__LogoSvgContainer {
+  height: inherit;
+  display: inherit;
+  align-items: inherit;
+  background-color: gray;
+
+}
+
+#nav__LogoSvg {
+  width: 2.5rem;
+  animation: spin infinite 20s linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* NAV INPUT SEARCH */
+
+.nav__FormContainer {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  background-color: red;
+}
+
+
+
+#nav__SearchSvg {
+  display: flex;
+  width: 1rem;
+  padding: 0 5px;
+}
+
+#nav__Input {
+  display: flex;
+  width: 100%;
+  height: 1.8rem;
+}
+
+/* nav carrito */
+
+#nav__CartSvg {
+  width: 1.25rem;
+}
+
+
+/* nav links */
+
+.nav__UlContainer {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  /* background-color: gray; */
+}
+
+.nav__Ul {
+  display: flex;
+  gap: 0.9rem;
+  padding: 0;
+}
+
+.nav__Ul li > a {
+  color: white;
+}
+
+/* nav iconon abrir y cerrar menu hamburguesa */
+
+.nav__MenuSvgContainer {
+  position: absolute;
+  z-index: -1;
+}
+
+.nav__MenuSvg {
+  width: 0.9rem;
+}
+
+.nav__CloseSvgContainer {
+  position: absolute;
+  z-index: -1;
+}
+
+.nav__CloseSvg {
+  width: 0.9rem;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 767px) {
+  .nav__MenuSvgContainer {
+    display: block;
+    position: static;
+    z-index: auto;
+  }
+
+  .nav__UlContainer {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 3s;
+    transform: translateX(100vw);
+    z-index: 100;
+    
+    /* background-color: red; */
+    background-color: rgba(74, 74, 74, 0.933);
+  }
+
+  .nav__Ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    gap: 0;
+  }
+
+  .nav__Ul > li {
+    background-color: red;
+    width: 100%;
+    height: 100%;
+  }
+
+  .nav__Ul li > a {
+    outline: 1px solid red;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  .nav__CloseSvgContainer {
+    display: block;
+    position: absolute;
+    right: 0.6rem;
+    top: 0.6rem;
+    /* para que aparezca poner zindex en 10 */
+    /* z-index: 10; */
+  }
+
+  .nav__CloseSvg{
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .visible{
+    transform: translateX(0);
+    /* opacity: 1; */
+    transition: all 0.5
+  }
+  
+}
