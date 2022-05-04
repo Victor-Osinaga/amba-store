@@ -1,0 +1,12 @@
+.nav__CartSvgContainer > i {
+  display: flex;
+  gap: 5px;
+}
+
+.nav__CartSvgContainer i > img {
+  width: 1.3rem;
+}
+
+.nav__CartSvgContainer i > p {
+  font-size: 1.3rem;
+}

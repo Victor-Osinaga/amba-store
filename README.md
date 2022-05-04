@@ -1,4 +1,4 @@
-Este es mi github de mi proyecto final que va a ser una tienda de ropa hecha con React!
+Este es mi github del proyecto final que va a ser una tienda de productos de belleza hecha con React!
 
 # Getting Started with Create React App
 

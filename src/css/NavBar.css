@@ -1,0 +1,184 @@
+/* nav */
+:root {
+  --navHeight: 60px;
+}
+
+#nav {
+  background-color: red;
+  width: 100%;
+  height: var(--navHeight);
+}
+
+.nav__Container {
+  max-width: 80vw;
+  height: 100%;
+  background-color: green;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* NAV LOGO */
+
+.nav__LogoSvgContainer {
+  display: flex;
+  background-color: gray;
+  animation: spin infinite 20s linear;
+}
+
+#nav__LogoSvg {
+  width: 2.5rem;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* NAV INPUT SEARCH */
+
+.nav__FormContainer {
+  display: flex;
+  align-items: center;
+  /* width: 50%; */
+  flex-grow: 0.5;
+  background-color: red;
+}
+
+#nav__SearchSvg {
+  display: flex;
+  width: 1.5rem;
+  padding: 0 5px;
+}
+
+#nav__Input {
+  display: flex;
+  width: 100%;
+  height: 1.8rem;
+}
+
+/* nav links */
+
+.nav__Ul {
+  display: flex;
+  gap: 1rem;
+  background-color: gray;
+}
+
+.nav__Ul li {
+  position:relative;
+}
+
+.nav__Ul li > a {
+  color: white;
+}
+
+/* SUBMENU DE PRODUCTOS */
+
+.submenu {
+  display: none;
+  position: absolute;
+  top:100%;
+  left: 0;
+  width: 130%;
+  text-align: left;
+  background-color: red;
+}
+
+.nav__Ul .submenu__container:hover .submenu {
+  display: block;
+}
+
+.submenu > li {
+  padding: 10px 0 10px 5px;
+}
+
+
+/* nav iconon abrir y cerrar menu hamburguesa */
+
+.nav__MenuSvgContainer {
+  display: none;
+}
+
+.nav__MenuSvg {
+  display: flex;
+  width: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__MenuSvgContainer {
+    display: flex;
+  }
+
+  .nav__Ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: var(--navHeight);
+    height: calc(100% - var(--navHeight));
+    background-color: rgba(74, 74, 74, 0.933);
+    flex-direction: column;
+    gap: 0;
+    /* align-items: center;
+    justify-content: space-evenly; */
+  }
+
+  .nav__Ul > li {
+    background-color: red;
+    height: 100%;
+    width: 100%;
+  }
+
+  .nav__Ul li > a {
+    outline: 1px solid red;
+    background-color: green;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  .submenu {
+    position: absolute;
+    z-index: 555;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 40%;
+    left: 60%;
+    bottom: 0;
+    text-align: left;
+    background-color: red;
+  }
+
+  .submenu li {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  .submenu li > a{
+    padding-left: 10%;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+  }
+
+  .nav__Ul .submenu__container:hover .submenu {
+    display: flex;
+    transition: all 3s;
+  }
+
+  .expanded {
+    display: flex;
+  }
+}
