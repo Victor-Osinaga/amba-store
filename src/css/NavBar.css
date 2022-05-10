@@ -291,4 +291,13 @@
     font-weight: 500;
     font-size: 0.65rem;
   }
+
+  .nav__Container {
+    justify-content: space-between;
+  }
+
+  .nav__FormContainer {
+    flex-grow: 0;
+    /* width: 40%; */
+  }
 }

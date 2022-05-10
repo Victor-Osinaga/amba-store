@@ -17,7 +17,7 @@ function NavBar(){
         </div>
         <form className="nav__FormContainer">
           <i><img id='nav__SearchSvg' src={searchSvg}/></i>
-          <input type="search" id="nav__Input" placeholder="Estoy buscando..." />
+          <input type="search" id="nav__Input" placeholder="Buscar..." />
         </form>
         <CartWidget />
         <ul className={
