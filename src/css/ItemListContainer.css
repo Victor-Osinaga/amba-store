@@ -1,10 +1,30 @@
 .ItemListContainer {
-  background-color: blue;
+  /* background-color: blue; */
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 15px 0;
   color: black;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .contadorContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .contadorContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contadorContainer {
+    grid-template-columns: 1fr;
+  }
 }

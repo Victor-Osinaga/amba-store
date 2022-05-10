@@ -5,7 +5,7 @@ import '../css/ItemListContainer.css';
 function ItemListContainer(props){
   return (
     <div className="ItemListContainer">
-      Hola soy <b>{props.greeting}</b>
+      <h1>Hola soy <b>{props.greeting}</b></h1>
       <div className="contadorContainer">
         <ItemCount
           titulo = 'Titulo 1'

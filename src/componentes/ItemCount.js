@@ -20,7 +20,7 @@ function ItemCount (props){
     <div className='contador'>
       <h4>{ props.titulo }</h4>
       <div>IMG</div>
-      <div>
+      <div className='contadorControl'>
         <button onClick={ countRemove }>-</button>
         <strong>{ count }</strong>
         <button onClick={ countAdd }> + </button>

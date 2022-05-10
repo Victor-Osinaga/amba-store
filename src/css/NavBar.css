@@ -4,7 +4,7 @@
 }
 
 #nav {
-  background-color: red;
+  /* background-color: red; */
   width: 100%;
   height: var(--navHeight);
 }
@@ -12,11 +12,12 @@
 .nav__Container {
   max-width: 80vw;
   height: 100%;
-  background-color: green;
+  /* background-color: green; */
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  outline: 1px solid black;
 }
 
 /* NAV LOGO */
@@ -67,7 +68,7 @@
 .nav__Ul {
   display: flex;
   gap: 1rem;
-  background-color: gray;
+  /* background-color: gray; */
 }
 
 .nav__Ul li {
@@ -75,7 +76,7 @@
 }
 
 .nav__Ul li > a {
-  color: white;
+  color: black;
 }
 
 /* SUBMENU DE PRODUCTOS */
@@ -142,7 +143,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
   }
 
   .submenu {
