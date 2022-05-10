@@ -13,6 +13,7 @@ function NavBar(){
     <nav id="nav">
       <div className='nav__Container'>
         <div className='nav__LogoSvgContainer'>
+          {/* <div className='noRotate'></div> */}
           <img id='nav__LogoSvg' src={logo}/>
         </div>
         <form className="nav__FormContainer">
