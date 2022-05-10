@@ -1,12 +1,31 @@
-.nav__CartSvgContainer > i {
+ .nav__CartSvgContainer{
   display: flex;
   gap: 5px;
+  position: relative;
 }
 
-.nav__CartSvgContainer i > img {
+.nav__CartSvgContainer > img {
   width: 1.3rem;
 }
 
+.nav__CartSvgContainer > span {
+  font-weight: 600;
+  position: absolute;
+  left: 75%;
+  bottom: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  border-radius: 50%;
+  /* width: 1.3rem; */
+  
+}
+/*
 .nav__CartSvgContainer i > p {
   font-size: 1.3rem;
-}
+} */

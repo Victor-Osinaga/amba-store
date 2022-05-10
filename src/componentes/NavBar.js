@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from "react";
-import logo from '../logo.svg';
+import logo from '../imagenes/corona.png';
 import '../css/NavBar.css';
 import searchSvg from '../imagenes/search.svg';
 import navMenuSvg from '../imagenes/menu.svg';

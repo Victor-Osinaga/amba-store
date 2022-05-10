@@ -7,6 +7,10 @@
   /* background-color: red; */
   width: 100%;
   height: var(--navHeight);
+  background: transparent;
+  position: fixed;
+  z-index: 6;
+  color: white;
 }
 
 .nav__Container {
@@ -17,20 +21,70 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  outline: 1px solid black;
+  /* outline: 1px solid white; */
+  /* border-bottom: 1px solid white; */
+  box-shadow: 0px 0.3px 0 white;
 }
 
 /* NAV LOGO */
 
 .nav__LogoSvgContainer {
+  position: relative;
   display: flex;
-  background-color: gray;
-  animation: spin infinite 20s linear;
+  animation-name: rotacion;
+  /* height: 100%; */
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  /* background-color: gray; */
 }
 
 #nav__LogoSvg {
+  /* color: white; */
+  /* background-color: red; */
+  /* animation: spin infinite 20s linear; */
   width: 2.5rem;
 }
+
+.nav__LogoSvgContainer::after{
+  content: "AMBA";
+  color: white;
+  position: absolute;
+  right: 110%;
+  top: 25%;
+  /* background-color: aqua; */
+  /* animation-name: rotacion; */
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  font-weight: 500;
+}
+
+.nav__LogoSvgContainer::before{
+  content: "STORE";
+  color: white;
+  position: absolute;
+  left: 110%;
+  top: 25%;
+  /* animation-name: rotacion; */
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  font-weight: 500;
+}
+
+@keyframes rotacion {
+  0% {
+    transform: rotate3d(0);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  100% {
+    transform: rotate3d(0);
+  }
+}
+
 
 @keyframes spin {
   from {
@@ -44,11 +98,11 @@
 /* NAV INPUT SEARCH */
 
 .nav__FormContainer {
+  outline: 1px solid white;
   display: flex;
   align-items: center;
   /* width: 50%; */
-  flex-grow: 0.5;
-  background-color: red;
+  flex-grow: 0.3;
 }
 
 #nav__SearchSvg {
@@ -61,6 +115,19 @@
   display: flex;
   width: 100%;
   height: 1.8rem;
+  background-color: transparent;
+  border: none;
+}
+
+#nav__Input:focus {
+  outline: none;
+  color: white;
+}
+
+#nav__Input::placeholder {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.75);
+  /* letter-spacing: 0.2px; */
 }
 
 /* nav links */
@@ -76,7 +143,8 @@
 }
 
 .nav__Ul li > a {
-  color: black;
+  font-weight: 500;
+  color: white;
 }
 
 /* SUBMENU DE PRODUCTOS */
@@ -84,11 +152,12 @@
 .submenu {
   display: none;
   position: absolute;
+  z-index: 10;
   top:100%;
   left: 0;
   width: 130%;
   text-align: left;
-  background-color: red;
+  background-color: transparent;
 }
 
 .nav__Ul .submenu__container:hover .submenu {
@@ -96,7 +165,12 @@
 }
 
 .submenu > li {
-  padding: 10px 0 10px 5px;
+  padding: 10px 0 10px 0px;
+}
+
+.submenu li > a {
+  padding-bottom: 5px;
+  box-shadow: 0px 1px 0px white;
 }
 
 
@@ -180,5 +254,41 @@
 
   .expanded {
     display: flex;
+  }
+
+  .nav__LogoSvgContainer{
+    /* background-color: gray; */
+  }
+
+  #nav__LogoSvg {
+    width: 1.5rem;
+  }
+
+  .nav__LogoSvgContainer::after{
+    content: "AMBA";
+    color: white;
+    position: absolute;
+    right: 110%;
+    top: 30%;
+    /* animation-name: rotacion; */
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    font-weight: 500;
+    font-size: 0.65rem;
+  }
+  
+  .nav__LogoSvgContainer::before{
+    content: "STORE";
+    color: white;
+    position: absolute;
+    left: 110%;
+    top: 30%;
+    /* animation-name: rotacion; */
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    font-weight: 500;
+    font-size: 0.65rem;
   }
 }

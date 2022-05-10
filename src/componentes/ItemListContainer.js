@@ -5,6 +5,7 @@ import '../css/ItemListContainer.css';
 function ItemListContainer(props){
   return (
     <div className="ItemListContainer">
+      <div className='background'></div>
       <h1>Hola soy <b>{props.greeting}</b></h1>
       <div className="contadorContainer">
         <ItemCount
