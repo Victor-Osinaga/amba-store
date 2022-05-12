@@ -1,32 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import productosDB from '../data/productos.js'
 import ItemCount from "./ItemCount";
+import ItemList from './ItemList.js'
 import '../css/ItemListContainer.css';
 
+function getProductos() {
+  return new Promise( (resolve, reject) => {
+    setTimeout( () => {
+      resolve(productosDB);
+      // reject(new Error('Error de conexión'));
+    }, 2000);
+  });
+}
+
 function ItemListContainer(props){
+  // console.log(productosDB);
+  const [productos, setProductos] = useState([]);
+
+  useEffect( () => {
+    getProductos().then( respuestaPromise => {
+      console.log(`respuesta${respuestaPromise}`);
+      setProductos(respuestaPromise);
+    })
+    .catch( (errorPromise) => console.error(errorPromise));
+  }, []);
+
+
   return (
     <div className="ItemListContainer">
       <div className='background'></div>
+      <h2>ItemListContainer</h2>
       <h1>Hola soy <b>{props.greeting}</b></h1>
       <div className="contadorContainer">
+        <ItemList productos={productos}/>
         <ItemCount
           titulo = 'Titulo 1'
           stock = {5}
-          initial = {0} />
-        <ItemCount
-          titulo = 'Titulo 2'
-          stock = {8}
-          initial = {0} />
-        <ItemCount
-          titulo = 'Titulo 3'
-          stock = {10}
-          initial = {0} />
-        <ItemCount
-          titulo = 'Titulo 4'
-          stock = {15}
-          initial = {0} />
-          <ItemCount
-          titulo = 'Titulo 5'
-          stock = {25}
           initial = {0} />
       </div>
     </div>

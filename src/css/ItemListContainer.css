@@ -13,13 +13,13 @@
 .contadorContainer {
   display: grid;
   flex-wrap: wrap;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
 }
 
 @media screen and (max-width: 767px) {
   .contadorContainer {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 

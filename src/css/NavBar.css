@@ -105,6 +105,11 @@
   align-items: center;
   /* width: 50%; */
   flex-grow: 0.3;
+  padding: 0 5px;
+}
+
+.searchIco {
+  margin: 0 10px 0 0;
 }
 
 #nav__SearchSvg {
@@ -300,6 +305,7 @@
 
   .nav__FormContainer {
     flex-grow: 0;
+    width: 40%;
     /* width: 40%; */
   }
 }
