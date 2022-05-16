@@ -1,5 +1,5 @@
-.ItemListContainer {
-  /* background-color: blue; */
+/* .ItemListContainer {
+  background-color: blue;
   max-width: 90vw;
   margin: 0 auto;
   padding: 15px 0;
@@ -8,23 +8,23 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-}
+} */
 
-.contadorContainer {
+/* .ItemListContainer {
   display: grid;
   flex-wrap: wrap;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
 }
 
 @media screen and (max-width: 767px) {
-  .contadorContainer {
-    grid-template-columns: 1fr;
+  .ItemListContainer {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .contadorContainer {
+  .ItemListContainer {
     grid-template-columns: 1fr;
   }
-}
+} */

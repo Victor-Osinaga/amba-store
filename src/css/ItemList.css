@@ -1,0 +1,31 @@
+.itemListContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 90vw;
+  margin: 20px auto;
+}
+
+.titleItemList {
+  grid-column: span 4;
+}
+
+
+@media screen and (max-width: 767px) {
+  .itemListContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+  .titleItemList {
+  grid-column: span 2;
+}
+}
+
+@media screen and (max-width: 480px) {
+  .itemListContainer {
+    grid-template-columns: 1fr;
+  }
+  .titleItemList {
+    grid-column: span 1;
+  }
+}

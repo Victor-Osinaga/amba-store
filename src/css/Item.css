@@ -1,0 +1,14 @@
+.itemContainer {
+  /* background: red; */
+  outline: 1px solid gray;
+  padding: 10px;
+}
+
+.itemImgContainer {
+  object-fit: cover;
+}
+
+.itemImg {
+  width: 100%;
+  object-fit: cover;
+}

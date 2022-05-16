@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from '../imagenes/corona.png';
 import '../css/NavBar.css';
 import searchSvg from '../imagenes/search.svg';
@@ -11,6 +11,7 @@ import CartWidget from './CartWidget';
 function NavBar(){
 
   const [navVisible, setNavVisible] = useState(false);
+
   return (
     <nav id="nav">
       <div className='nav__Container'>
