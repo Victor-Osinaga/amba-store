@@ -19,12 +19,13 @@ function ItemCount (props){
   return (
     <div className='contador'>
       <h4>{ props.titulo }</h4>
-      <div>IMG</div>
+      <div>Cantidad</div>
       <div className='contadorControl'>
         <button onClick={ countRemove }>-</button>
         <strong>{ count }</strong>
         <button onClick={ countAdd }> + </button>
       </div>
+      <button>Añadir al carrito</button>
     </div>
   )
 }

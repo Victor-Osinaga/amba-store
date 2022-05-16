@@ -1,19 +1,21 @@
 /* nav */
 :root {
-  --navHeight: 60px;
+  --navHeight: 50px;
 }
 
 #nav {
   /* background-color: red; */
+  background-color: rgba(0,0,0,0.3);
   width: 100%;
   height: var(--navHeight);
-  background: transparent;
+  /* background: transparent; */
   position: fixed;
   z-index: 6;
   color: white;
 }
 
 .nav__Container {
+  /* background: rgba(0,0,0,0.9); */
   max-width: 80vw;
   height: 100%;
   /* background-color: green; */
@@ -193,6 +195,10 @@
 }
 
 @media screen and (max-width: 767px) {
+  :root {
+    --navHeight: 40px;
+  }
+
   .nav__MenuSvgContainer {
     display: flex;
   }
@@ -263,9 +269,9 @@
     display: flex;
   }
 
-  .nav__LogoSvgContainer{
-    /* background-color: gray; */
-  }
+  /* .nav__LogoSvgContainer{
+    background-color: gray;
+  } */
 
   #nav__LogoSvg {
     width: 1.5rem;

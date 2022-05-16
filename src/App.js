@@ -2,14 +2,15 @@ import './App.css';
 import NavBar from './componentes/NavBar.js';
 import Home from './componentes/Home.js'
 import ItemListContainer from './componentes/ItemListContainer';
+import ItemDetailContainer from './componentes/ItemDetailContainer';
 
 function App() {
   return (
     <div className="App">
       <NavBar />
       <Home />
-      <ItemListContainer 
-      greeting = 'GREETING' />
+      <ItemListContainer greeting = 'GREETING' />
+      <ItemDetailContainer id={5} />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
