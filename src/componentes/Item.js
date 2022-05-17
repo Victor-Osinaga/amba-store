@@ -12,6 +12,7 @@ function Item( {producto} ) {
       </div>
       <p className='itemPrecio'>Precio: ${producto.precio}</p>
       <h4 className='itemStock'>Stock: {producto.stock}</h4>
+      <a href='#'>ver mas...</a>
     </div>
   )
 }

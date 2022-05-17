@@ -1,6 +1,8 @@
 .itemContainer {
   /* background: red; */
+  border-radius: 5px;
   outline: 1px solid gray;
+  background: white;
   padding: 10px;
 }
 

@@ -162,11 +162,12 @@
   display: none;
   position: absolute;
   z-index: 10;
-  top:100%;
+  top: 180%;
   left: 0;
   width: 130%;
   text-align: left;
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.3);
+  transition: all 2s;
 }
 
 .nav__Ul .submenu__container:hover .submenu {
