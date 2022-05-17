@@ -170,7 +170,7 @@
   transition: all 2s;
 }
 
-.nav__Ul .submenu__container:hover .submenu {
+.nav__Ul .submenu__container:focus .submenu {
   display: block;
 }
 
