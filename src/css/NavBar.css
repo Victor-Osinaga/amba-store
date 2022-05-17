@@ -1,6 +1,7 @@
 /* nav */
 :root {
   --navHeight: 50px;
+  --colorMain: #96305A;
 }
 
 #nav {
@@ -28,17 +29,25 @@
   box-shadow: 0px 0.3px 0 white;
 }
 
+#nav:hover .nav__Container{
+  box-shadow: 0px 1px 0 var(--colorMain);
+}
+
 /* NAV LOGO */
 
 .nav__LogoSvgContainer {
   position: relative;
   display: flex;
   animation-name: rotacion;
-  /* height: 100%; */
   animation-duration: 1.5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  /* height: 100%; */
   /* background-color: gray; */
+}
+
+.nav__LogoSvgContainer:hover {
+  cursor: pointer;
 }
 
 
@@ -58,9 +67,9 @@
   top: 25%;
   /* background-color: aqua; */
   /* animation-name: rotacion; */
-  animation-duration: 1.5s;
+  /* animation-duration: 1.5s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
   font-weight: 500;
 }
 
@@ -71,9 +80,9 @@
   left: 110%;
   top: 25%;
   /* animation-name: rotacion; */
-  animation-duration: 1.5s;
+  /* animation-duration: 1.5s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
   font-weight: 500;
 }
 
@@ -90,14 +99,14 @@
 }
 
 
-@keyframes spin {
+/* @keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 /* NAV INPUT SEARCH */
 
@@ -109,6 +118,21 @@
   flex-grow: 0.3;
   padding: 0 5px;
 }
+
+.nav__FormContainer:hover {
+  outline: 1px solid var(--colorMain);
+  color: var(--colorMain);
+  cursor: pointer;
+}
+
+.nav__FormContainer:hover #nav__Input::placeholder {
+  color: var(--colorMain);
+}
+
+#nav__Input:hover {
+  cursor: pointer;
+}
+
 
 .searchIco {
   margin: 0 10px 0 0;
@@ -154,6 +178,10 @@
 .nav__Ul li > a {
   font-weight: 500;
   color: white;
+}
+
+.nav__Ul li > a:hover {
+  color: var(--colorMain);
 }
 
 /* SUBMENU DE PRODUCTOS */
