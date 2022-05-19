@@ -2,11 +2,10 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import logo from '../imagenes/corona.png';
 import '../css/NavBar.css';
-import searchSvg from '../imagenes/search.svg';
 import { FaSistrix } from 'react-icons/fa';
 import { AiOutlineMenu } from 'react-icons/ai';
-import navMenuSvg from '../imagenes/menu.svg';
 import CartWidget from './CartWidget';
+import Categorias from './Categorias';
 
 function NavBar(){
 
@@ -15,6 +14,7 @@ function NavBar(){
   return (
     <nav id="nav">
       <div className='nav__Container'>
+        <Categorias /> 
         <div className='nav__LogoSvgContainer'>
           {/* <div className='noRotate'></div> */}
           <img id='nav__LogoSvg' src={logo}/>

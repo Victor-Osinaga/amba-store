@@ -1,35 +1,43 @@
 import React, { useEffect, useState } from "react";
-import productosDB from '../data/productos.js'
-import ItemCount from "./ItemCount";
-import ItemList from './ItemList.js'
+import productosDB from '../data/productos.js';
+import ItemList from './ItemList.js';
+import { useParams } from "react-router-dom";
 import '../css/ItemListContainer.css';
 
-function getProductos() {
+function getProductos(categoryid) {
   return new Promise( (resolve, reject) => {
     setTimeout( () => {
-      resolve(productosDB);
+      if (categoryid){
+        const arrayFiltered = productosDB.filter( (producto)=>{
+          return producto.categoria === categoryid;
+        });
+        resolve(arrayFiltered)
+      }else {
+        resolve(productosDB);
+      }
       // reject(new Error('Error de conexión'));
-    }, 2000);
+    }, 500);
   });
 }
 
-function ItemListContainer(props){
+function ItemListContainer( {titulo} ){
   // console.log(productosDB);
   const [productos, setProductos] = useState([]);
+  const { categoryid } = useParams();
 
   useEffect( () => {
-    getProductos().then( respuestaPromise => {
-      console.log(`respuesta${respuestaPromise}`);
+    getProductos(categoryid).then( respuestaPromise => {
+      // console.log(`respuesta${respuestaPromise}`);
       setProductos(respuestaPromise);
     })
     .catch( (errorPromise) => console.error(errorPromise));
-  }, []);
+  }, [categoryid]);
 
 
   return (
     <div className="ItemListContainer">
       <h2>ItemListContainer</h2>
-      <h1>Hola soy <b>{props.greeting}</b></h1>
+      <h1><b>{titulo}</b></h1>
       {/* <ItemCount
         titulo = 'Titulo 1'
         stock = {5}

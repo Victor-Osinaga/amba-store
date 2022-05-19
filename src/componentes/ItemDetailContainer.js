@@ -1,34 +1,37 @@
 import React, { useEffect, useState } from "react";
-import productosDB from '../data/productos.js'
-import ItemDetail from './ItemDetail.js'
+import { useParams } from "react-router-dom";
+import productosDB from '../data/productos.js';
+import ItemDetail from './ItemDetail.js';
 // import '../css/ItemListContainer.css';
 
-function getProducto() {
+function getProducto(id) {
   return new Promise( (resolve, reject) => {
     setTimeout( () => {
-      resolve(productosDB);
+      const productoFound = productosDB.find( (producto)=>{
+        return parseInt(id) === producto.id;
+      })
+      resolve(productoFound);
       // reject(new Error('Error de conexión'));
-    }, 2000);
+    }, 500);
   });
 }
 
-function ItemDetailContainer( {id} ){
+function ItemDetailContainer(){
   // console.log(productosDB);
   const [producto, setProducto] = useState([]);
+  const { itemid } = useParams();
 
   useEffect( () => {
-    getProducto().then( respuestaPromise => {
-      console.log(`respuesta${respuestaPromise}`);
-      setProducto(respuestaPromise[id]);
-    })
-    .catch( (errorPromise) => console.error(errorPromise));
-  }, []);
+    getProducto(itemid).then( respuestaPromise => {
+      setProducto(respuestaPromise)
+    });
+  }, [itemid]);
 
 
   return (
     <section className="ItemDetailContainer">
       <ItemDetail 
-        producto={producto}
+        producto = {producto}
       />
     </section>
   )

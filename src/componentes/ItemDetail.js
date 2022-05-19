@@ -1,6 +1,6 @@
 import React from 'react';
-import ItemCount from './ItemCount.js'
-import '../css/ItemDetail.css'
+import ItemCount from './ItemCount.js';
+import '../css/ItemDetail.css';
 
 
 function ItemDetail( {producto} ) {
@@ -16,7 +16,7 @@ function ItemDetail( {producto} ) {
         <h4 className='itemDetailStock'>Stock: {producto.stock}</h4>
         <p className='itemDetailDescripcion'>{producto.descripcion}</p>
         <ItemCount
-          titulo = 'Titulo 1'
+          titulo = {producto.titulo}
           stock = {producto.stock}
           initial = {1}
         />

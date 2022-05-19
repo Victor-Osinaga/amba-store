@@ -1,16 +1,24 @@
 import './App.css';
 import NavBar from './componentes/NavBar.js';
-import Home from './componentes/Home.js'
+import Home from './componentes/Home.js';
 import ItemListContainer from './componentes/ItemListContainer';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Home />
-      <ItemListContainer greeting = 'GREETING' />
-      <ItemDetailContainer id={5} />
+      <BrowserRouter >
+        <NavBar />
+        <Home />
+        <Routes>
+          <Route path="/producto/:itemid" element={<ItemDetailContainer />} />
+          <Route path="/" element={<ItemListContainer titulo = 'Hola desde react router' />} />
+          <Route path="/category/:categoryid" element={<ItemListContainer titulo = 'categoria de productos' />} />
+        </Routes>
+      </BrowserRouter>
+      {/* <ItemListContainer greeting = 'GREETING' /> */}
+      {/* <ItemDetailContainer id={5} /> */}
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
