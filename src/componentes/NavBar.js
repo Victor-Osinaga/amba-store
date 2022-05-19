@@ -6,6 +6,7 @@ import { FaSistrix } from 'react-icons/fa';
 import { AiOutlineMenu } from 'react-icons/ai';
 import CartWidget from './CartWidget';
 import Categorias from './Categorias';
+import { Link } from 'react-router-dom';
 
 function NavBar(){
 
@@ -13,12 +14,12 @@ function NavBar(){
 
   return (
     <nav id="nav">
+    <Categorias /> 
       <div className='nav__Container'>
-        <Categorias /> 
-        <div className='nav__LogoSvgContainer'>
+        <Link className='nav__LogoSvgContainer' to={'/'}>
           {/* <div className='noRotate'></div> */}
           <img id='nav__LogoSvg' src={logo}/>
-        </div>
+        </Link>
         <form className="nav__FormContainer">
           <FaSistrix className='searchIco'/>
           {/* <i><img id='nav__SearchSvg' src={searchSvg}/></i> */}

@@ -1,8 +1,3 @@
-:root {
-  --navHeight: 50px;
-  --colorMain: #96305A;
-} 
- 
 .nav__CartSvgContainer{
   display: flex;
   gap: 5px;

@@ -1,16 +1,17 @@
 /* nav */
 :root {
-  --navHeight: 50px;
+  --navHeight: 69.8px;
   --colorMain: #96305A;
 }
 
 #nav {
   /* background-color: red; */
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.5);
   width: 100%;
-  height: var(--navHeight);
+  /* height: var(--navHeight); */
   /* background: transparent; */
   position: fixed;
+  top: 0;
   z-index: 6;
   color: white;
 }
@@ -18,6 +19,7 @@
 .nav__Container {
   /* background: rgba(0,0,0,0.9); */
   max-width: 80vw;
+  padding: 0 0 5px;
   height: 100%;
   /* background-color: green; */
   margin: 0 auto;
@@ -224,9 +226,9 @@
 }
 
 @media screen and (max-width: 767px) {
-  :root {
+  /* :root {
     --navHeight: 40px;
-  }
+  } */
 
   .nav__MenuSvgContainer {
     display: flex;

@@ -1,3 +1,7 @@
+.ItemListContainer {
+  margin-top: var(--navHeight);
+}
+
 /* .ItemListContainer {
   background-color: blue;
   max-width: 90vw;

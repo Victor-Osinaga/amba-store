@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import productosDB from '../data/productos.js';
 import ItemDetail from './ItemDetail.js';
-// import '../css/ItemListContainer.css';
+import '../css/ItemDetailContainer.css';
 
 function getProducto(id) {
   return new Promise( (resolve, reject) => {

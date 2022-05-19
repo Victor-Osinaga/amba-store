@@ -10,11 +10,10 @@ function App() {
     <div className="App">
       <BrowserRouter >
         <NavBar />
-        <Home />
         <Routes>
           <Route path="/producto/:itemid" element={<ItemDetailContainer />} />
-          <Route path="/" element={<ItemListContainer titulo = 'Hola desde react router' />} />
-          <Route path="/category/:categoryid" element={<ItemListContainer titulo = 'categoria de productos' />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/category/:categoryid" element={<ItemListContainer titulo = 'categoria de ' />} />
         </Routes>
       </BrowserRouter>
       {/* <ItemListContainer greeting = 'GREETING' /> */}

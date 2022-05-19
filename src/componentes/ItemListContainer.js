@@ -37,7 +37,7 @@ function ItemListContainer( {titulo} ){
   return (
     <div className="ItemListContainer">
       <h2>ItemListContainer</h2>
-      <h1><b>{titulo}</b></h1>
+      <h1><b>{titulo}{categoryid}</b></h1>
       {/* <ItemCount
         titulo = 'Titulo 1'
         stock = {5}

@@ -1,0 +1,16 @@
+.Categorias {
+  background: rgba(150, 48, 90, .7);
+  /* opacity: .7; */
+  margin-bottom: 5px;
+}
+
+.categoriasContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0;
+}
+
+.categoriasContainer .link{
+  font-weight: bold;
+  color: white;
+}
