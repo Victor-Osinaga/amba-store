@@ -2,16 +2,16 @@ import React from 'react';
 import { useState } from 'react';
 import '../css/ItemCount.css';
 
-function ItemCount ( {titulo, stock, initial} ){
+function ItemCount ( {titulo, stock, initial, onAdd} ){
   const [count, setCount] = useState(initial);
 
   const countAdd = () => {
-    if (count >= 0 && count < stock) {
+    if (count < stock) {
       setCount(count + 1);
     }
   }
   const countRemove = () => {
-    if (count > 0) {
+    if (count > 1) {
       setCount(count - 1);
     }
   }
@@ -25,7 +25,7 @@ function ItemCount ( {titulo, stock, initial} ){
         <strong>{ count }</strong>
         <button onClick={ countAdd }> + </button>
       </div>
-      <button>Añadir al carrito</button>
+      <button onClick={ ()=>onAdd(count) }>Añadir al carrito</button>
     </div>
   )
 }

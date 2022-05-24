@@ -17,7 +17,7 @@ function getProducto(id) {
 }
 
 function ItemDetailContainer(){
-  // console.log(productosDB);
+  
   const [producto, setProducto] = useState([]);
   const { itemid } = useParams();
 
@@ -31,6 +31,7 @@ function ItemDetailContainer(){
   return (
     <section className="ItemDetailContainer">
       <ItemDetail 
+        // onAdd={onAdd}
         producto = {producto}
       />
     </section>

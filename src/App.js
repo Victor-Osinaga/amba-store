@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/producto/:itemid" element={<ItemDetailContainer />} />
           <Route path="/" element={<Home />} />
-          <Route path="/category/:categoryid" element={<ItemListContainer titulo = 'categoria de ' />} />
+          <Route path="/category/:categoryid" element={<ItemListContainer titulo = 'Categoria ' />} />
         </Routes>
       </BrowserRouter>
       {/* <ItemListContainer greeting = 'GREETING' /> */}

@@ -29,9 +29,9 @@ function NavBar(){
         <ul className={
               navVisible ? "nav__Ul expanded" : "nav__Ul"
             }>
-          <li><a href='#'>Inicio</a></li>
+          <li><Link to='/'>Inicio</Link></li>
           <li className='submenu__container'>
-            <a href='#'>Productos</a>
+            <a href='#productos'>Productos</a>
             <ul className='submenu'>
               <li><a href='#'>Ojos</a></li>
               <li><a href='#'>Uñas</a></li>

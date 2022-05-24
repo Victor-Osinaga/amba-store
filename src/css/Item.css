@@ -10,13 +10,35 @@
     ;
   background: white;
   padding: 10px;
+  height: 450px;
+  /* max-height: 600px; */
+  /* height: 600px; */
 }
 
 .itemImgContainer {
-  object-fit: cover;
+  /* max-height: 70%; */
+  height: 300px;
+  /* max-height: 300px; */
+  overflow: hidden;
 }
 
 .itemImg {
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
+
+@media screen and (max-width: 767px) {
+
+  .itemContainer {
+    height: 350px;
+  }
+
+  .itemImgContainer {
+    height: 200px;
+  }
+}
+
+/* @media screen and (max-width: 480px) {
+  
+} */
