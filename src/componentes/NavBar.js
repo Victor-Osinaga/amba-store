@@ -8,7 +8,13 @@ import CartWidget from './CartWidget';
 import Categorias from './Categorias';
 import { Link } from 'react-router-dom';
 
+import useCartContext from '../store/CartContext';
+
+
 function NavBar(){
+
+  const { contextFunction } = useCartContext();
+  contextFunction();
 
   const [navVisible, setNavVisible] = useState(false);
 

@@ -16,7 +16,7 @@ function getProductos(categoryid) {
         resolve(productosDB);
       }
       // reject(new Error('Error de conexión'));
-    }, 500);
+    }, 300);
   });
 }
 
