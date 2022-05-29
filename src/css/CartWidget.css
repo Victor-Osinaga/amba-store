@@ -4,7 +4,12 @@
   position: relative;
 }
 
-.nav__CartSvgContainer:hover {
+.cartIcon {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.nav__CartSvgContainer:hover .cartIcon {
   color: var(--colorMain);
   cursor: pointer;
 }
@@ -34,8 +39,3 @@
   background-color: var(--colorMain);
   color: white;
 }
-
-/*
-.nav__CartSvgContainer i > p {
-  font-size: 1.3rem;
-} */

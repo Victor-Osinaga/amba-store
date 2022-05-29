@@ -7,24 +7,29 @@ const useCartContext = () => useContext(CartContext);
 
 const { Provider } = CartContext;
 
+// REALIZAR LAS SIGUIENTES FUNCIONALIDADES:
+// cantInCart
+// calcPriceCart
+
 //* Guardar en el estado los items que agreguemos al cart
 //* 0_ necesitamos un ESTADO para guardar los items
-// 1_ agregar items al carrito
-// 2_ eliminar items del estado del carrito
-// 3_ limpiar TODO el carrito
-// 4_ comprobar si X item esta en el carrito
+//* 1_ agregar items al carrito
+//* 2_ eliminar items del estado del carrito
+//! 3_ limpiar TODO el carrito
+//! 4_ comprobar si X item esta en el carrito
+//! 5_ devolver la cantidad de items en el carrito
+//! 6_ devolver el precio final de la compra
 
 export function CartContextProvider({ children }){
   const [cart, setCart] = useState([]);
 
   const addToCart = (item, cant) => {
-    if (isInCart()){
+    if (isInCart(item.id)){
       const newCart = cart.map(cartItem => {
         if (cartItem.id === item.id){
           const copyItem = {...cartItem};
           copyItem.cant += cant;
           return copyItem;
-          // return cartItem.cant += cant;
         }else{
           return cartItem;
         }
@@ -44,14 +49,37 @@ export function CartContextProvider({ children }){
     setCart(cartFilter)
   }
 
-  const isInCart = () => {
-    return true;
+  const cleanCart = () => {
+    setCart([]);
+  }
+
+  const isInCart = (id) => {
+    return cart.some( itemCart => itemCart.id === id )
+  }
+
+  const getItemFromCart = (id) => {
+    return cart.find( itemCart => itemCart.id === id )
   }
 
   const contextFunction = () => console.log("contexto listo!");
+
+  const cantInCart = () => {
+    const total = 0;
+  /* forEach del cart y ir sumando al "total" la cantidad de este item
+   cart.forEach(itemCart => {
+    total = 
+  }) */
+    return total;
+  }
+
+  const calcPriceCart = () => {
+    const total = 15;
+
+    return total;
+  }
   
   return (
-    <Provider value = { { contextFunction, cart, addToCart } }>
+    <Provider value = { { contextFunction, cantInCart, calcPriceCart, cleanCart, getItemFromCart, cart, addToCart, removeFromCart } }>
       {children}
     </Provider>
   )

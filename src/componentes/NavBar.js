@@ -31,7 +31,7 @@ function NavBar(){
           {/* <i><img id='nav__SearchSvg' src={searchSvg}/></i> */}
           <input type="search" id="nav__Input" placeholder="Buscar..." />
         </form>
-        <CartWidget />
+        <Link to="/cart"> <CartWidget /> </Link>
         <ul className={
               navVisible ? "nav__Ul expanded" : "nav__Ul"
             }>

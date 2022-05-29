@@ -18,7 +18,7 @@ function getProducto(id) {
 
 function ItemDetailContainer(){
   
-  const [producto, setProducto] = useState([]);
+  const [producto, setProducto] = useState();
   const { itemid } = useParams();
 
   useEffect( () => {

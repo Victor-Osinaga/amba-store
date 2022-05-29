@@ -1,14 +1,14 @@
 import React from "react";
 import { BsBag  } from 'react-icons/bs';
+import useCartContext from '../store/CartContext';
 import '../css/CartWidget.css';
-import cartSvg from '../imagenes/cart.svg';
 
 function CartWidget () {
+  const { calcPriceCart } = useCartContext();
   return (
     <div className="nav__CartSvgContainer" >
-      < BsBag fontSize={"1.2rem"} />
-      {/* <img type="image/svg+xml" id='nav__CartSvg' src={cartSvg}/> */}
-      <span>0</span>
+      < BsBag className="cartIcon" />
+      <span>{calcPriceCart()}</span>
     </div>
   )
 }
