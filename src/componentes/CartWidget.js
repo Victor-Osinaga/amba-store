@@ -4,11 +4,11 @@ import useCartContext from '../store/CartContext';
 import '../css/CartWidget.css';
 
 function CartWidget () {
-  const { calcPriceCart } = useCartContext();
+  const { cantInCart } = useCartContext();
   return (
     <div className="nav__CartSvgContainer" >
       < BsBag className="cartIcon" />
-      <span>{calcPriceCart()}</span>
+      <span>{cantInCart()}</span>
     </div>
   )
 }

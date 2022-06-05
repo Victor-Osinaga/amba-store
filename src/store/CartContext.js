@@ -64,17 +64,19 @@ export function CartContextProvider({ children }){
   const contextFunction = () => console.log("contexto listo!");
 
   const cantInCart = () => {
-    const total = 0;
-  /* forEach del cart y ir sumando al "total" la cantidad de este item
+    let total = 0;
+  /* forEach del cart y ir sumando al "total" la cantidad de este item*/
    cart.forEach(itemCart => {
-    total = 
-  }) */
+    total += itemCart.cant
+  }) 
     return total;
   }
 
   const calcPriceCart = () => {
-    const total = 15;
-
+    let total = 0;
+    cart.forEach(itemCart => {
+    total += itemCart.cant * itemCart.precio
+  }) 
     return total;
   }
   
