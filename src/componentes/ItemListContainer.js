@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react";
-import productosDB from '../data/productos.js';
+// import productosDB from '../data/productos.js';
 import ItemList from './ItemList.js';
 import { useParams } from "react-router-dom";
 import '../css/ItemListContainer.css';
+import { getAllItems as getProductos, getItemsByCategory} from '../firebase/firebaseConfig'
 
-function getProductos(categoryid) {
-  return new Promise( (resolve, reject) => {
-    setTimeout( () => {
-      if (categoryid){
-        const arrayFiltered = productosDB.filter( (producto)=>{
-          return producto.categoria === categoryid;
-        });
-        resolve(arrayFiltered)
-      }else {
-        resolve(productosDB);
-      }
-      // reject(new Error('Error de conexión'));
-    }, 300);
-  });
-}
+// function getProductos(categoryid) {
+//   return new Promise( (resolve, reject) => {
+//     setTimeout( () => {
+//       if (categoryid){
+//         const arrayFiltered = productosDB.filter( (producto)=>{
+//           return producto.categoria === categoryid;
+//         });
+//         resolve(arrayFiltered)
+//       }else {
+//         resolve(productosDB);
+//       }
+//     }, 300);
+//   });
+// }
 
 function ItemListContainer( {titulo} ){
   // console.log(productosDB);
@@ -26,11 +26,17 @@ function ItemListContainer( {titulo} ){
   const { categoryid } = useParams();
 
   useEffect( () => {
-    getProductos(categoryid).then( respuestaPromise => {
-      // console.log(`respuesta${respuestaPromise}`);
-      setProductos(respuestaPromise);
-    })
-    .catch( (errorPromise) => console.error(errorPromise));
+    if (categoryid === undefined){
+      getProductos().then( respuestaPromise => {
+        setProductos(respuestaPromise);
+      })
+    }else{
+      getItemsByCategory(categoryid).then( respuestaPromise => {
+        setProductos(respuestaPromise);
+      })
+    }
+    
+    // .catch( (errorPromise) => console.error(errorPromise));
   }, [categoryid]);
 
 

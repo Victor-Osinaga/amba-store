@@ -93,7 +93,7 @@ const productos =
   {
     id: 11,
     titulo: "Esmalte Marca",
-    img: "https://lasmargaritas.vteximg.com.br/arquivos/ids/1405020-1000-1000/Esmalte-Color-Gel-UV-LED-Semipermanente-Meline.jpg?v=637871091248570000",
+    img: "https://w7.pngwing.com/pngs/732/158/png-transparent-nail-polish-cosmetic-red-nail-polish.png",
     precio: 700,
     categoria: "Unias",
     descripcion: "El Agua Micelar Bifásica remueve el maquillaje a prueba de agua con un algodón. Limpia, desmaquilla y nutre la piel. Con aceite de Argán que nutre y reconforta la piel.",
