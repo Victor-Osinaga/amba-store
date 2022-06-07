@@ -1,0 +1,21 @@
+.Footer{
+  width: 98%;
+  margin: 0 auto 10px;
+  /* position: relative; */
+}
+
+.footer__container{
+  background: #732D4D;
+  color: white;
+  padding: 15px 0;
+  /* position: absolute; */
+  /* bottom: 0; */
+}
+
+.footer__link {
+  color: black;
+}
+
+.footer__link:hover {
+  color: white;
+}

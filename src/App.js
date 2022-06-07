@@ -6,6 +6,7 @@ import ItemListContainer from './componentes/ItemListContainer';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { CartContextProvider } from './store/CartContext';
+import Footer from './componentes/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </CartContextProvider>
+      <Footer />
       {/* <ItemListContainer greeting = 'GREETING' /> */}
       {/* <ItemDetailContainer id={5} /> */}
       {/* <header className="App-header">

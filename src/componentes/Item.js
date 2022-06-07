@@ -14,7 +14,7 @@ function Item( {producto} ) {
       <p className='itemPrecio'>Precio: ${producto.precio}</p>
       <h4 className='itemStock'>Stock: {producto.stock}</h4>
       <Link to={`/producto/${producto.id}`}>
-        <button>ver mas...</button>
+        <button className='btn__vermas'>Ver mas</button>
       </Link>
     </div>
   )

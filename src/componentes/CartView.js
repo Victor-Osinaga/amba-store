@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React /*, { useContext } */from "react";
 import useCartContext from '../store/CartContext';
 import { Link } from 'react-router-dom';
+import '../css/CartView.css';
 
 function CartView() {
   const { cart, removeFromCart, cleanCart, calcPriceCart } = useCartContext();
@@ -10,7 +11,7 @@ function CartView() {
   // mostrar una interfaz para eliminar items y/o vaciar el carrito
   if (cart.length === 0) {
     return(
-      <section style={{margin: "70px 0 0"}}>
+      <section className="CartView" >
         <div>
           <h4>No hay items en el carrito.</h4>
           <Link to="/">Volver al catálogo</Link>
@@ -19,12 +20,12 @@ function CartView() {
     )
   }else{
     return (
-      <section className="CartView" style={{margin: "70px 0 0"}}>
+      <section className="CartView" >
         <div className="itemCartContainer">
           {cart.map( itemCart => {
             return  <div className="itemCart" key={itemCart.id}>
                       <h3>{itemCart.titulo}</h3>
-                      <div><img style={{width: "100px"}} src={itemCart.img} /></div>
+                      <div><img alt={itemCart.titulo} style={{width: "100px"}} src={itemCart.img} /></div>
                       <h4>cantidad: {itemCart.cant}</h4>
                       <h4>${itemCart.cant * itemCart.precio}</h4>
                       <button onClick={ ()=> removeFromCart(itemCart.id) }>Eliminar</button>

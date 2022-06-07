@@ -1,24 +1,34 @@
 .itemContainer {
-  /* background: red; */
-  border-radius: 5px;
+  /* border-radius: 5px;
   box-shadow:
   .5px .5px 0px 0px #96305A,
-  -.5px -.5px 0px 0px #96305A
-    /* inset 0 -3em 3em rgba(255, 0, 68, 0.1),
-        0 0  0 2px rgb(255,255,255),
-        0.3em 0.3em 1em rgba(215, 15, 15, 0.3); */
-    ;
-  background: white;
+  -.5px -.5px 0px 0px #96305A;
+  background: white; */
   padding: 10px;
   height: 450px;
-  /* max-height: 600px; */
-  /* height: 600px; */
+
+  background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3); */
+
+/* border-radius: 15px;
+background: #eec9c9;
+box-shadow:  20px 20px 60px #caabab,
+             -20px -20px 60px #ffe7e7; */
+
 .itemImgContainer {
-  /* max-height: 70%; */
   height: 300px;
-  /* max-height: 300px; */
   overflow: hidden;
 }
 
@@ -26,6 +36,19 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.btn__vermas {
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #732D4D;
+  padding: 5px 10px;
+  color: white;
+}
+
+.btn__vermas:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
