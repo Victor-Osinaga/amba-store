@@ -6,8 +6,8 @@ function Footer (){
     <section className='Footer'>
       <div className='footer__container'>
         <p className='footer__text'>
-          Sitio web hecho en React por 
-          <a className='footer__link' href='https://youtube.com'>
+          Sitio web desarrollado en React por 
+          <a target='_BLANK' rel='noreferrer' className='footer__link' href='https://victor-osinaga.github.io/Portfolio/'>
             <b> Victor Osinaga</b>
           </a>
         </p>

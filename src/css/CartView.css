@@ -1,7 +1,121 @@
 .CartView {
-  margin-top: var(--navHeight);
-  height: calc(100vh - var(--navHeight));
+  justify-content: center;
+  margin-top: calc(var(--navHeight) + 10px);
+  min-height: calc(85vh - var(--navHeight));
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.itemCartContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.infoFinal {
+  grid-column: span 4;
+}
+
+.itemCart {
+  outline: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.itemDescription {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.itemDescr1 img {
+  width: 120px;
+}
+
+.itemDescr2 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.btnEliminar {
+  border-radius: 5px;
+  border: none;
+  background: red;
+  padding: 5px 10px;
+  color: white;
+}
+
+.btnVaciarCarrito {
+  border-radius: 5px;
+  border: none;
+  /* background: #fd7e14; */
+  background: #732D4D;
+  padding: 5px 10px;
+  color: white;
+  height: 35px;
+}
+
+.btnComprar {
+  border-radius: 5px;
+  border: none;
+  background: green;
+  padding: 5px 10px;
+  color: white;
+  width: 50%;
+  height: 50px;
+}
+
+.btnComprar, .btnVaciarCarrito, .precioFinal {
+  margin-bottom: 10px;
+}
+
+.btnComprar, .btnEliminar, .btnVaciarCarrito:hover {
+  cursor: pointer;
+}
+
+/* Estilos cuando no hay nada en el carrito */
+
+
+@media screen and (max-width: 1200px) {
+
+  .CartView {
+    margin-top: calc(var(--navHeight) + 0px);
+  }
+
+  .itemCartContainer {
+    grid-template-columns: 3fr;
+  }
+
+  .infoFinal {
+    grid-column: span 3;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .itemCartContainer {
+    grid-template-columns: 2fr;
+  }
+
+  .infoFinal {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .itemCartContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .infoFinal {
+    grid-column: span 1;
+  }
 }

@@ -1,11 +1,17 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, getDoc, query, where, collection, getDocs } from 'firebase/firestore/lite'
+import { 
+  getFirestore, 
+  doc, 
+  getDoc, 
+  query, 
+  setDoc,
+  addDoc,
+  where, 
+  collection,
+  Timestamp,
+  getDocs 
+} from 'firebase/firestore/lite'
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCWno7SsJVi2LMXdyOhNxHjqNJikAnUD6k",
   authDomain: "amba-store.firebaseapp.com",
@@ -59,4 +65,18 @@ export async function getItem(id){
     ...productoSnap.data(),
     id: productoSnap.id
   }
+}
+
+export async function createBuyOrder(orderData){
+  const buyTimestamp = Timestamp.now();
+  const orderWithDate = {
+    ...orderData, 
+    date: buyTimestamp
+  };
+
+  const miColec = collection(firestoreDB, "buyOrders");
+  const orderDoc = await addDoc(miColec, orderWithDate);
+  
+  alert(`Gracias por tu compra su ID es: ${orderDoc.id}`);
+  console.log("Orden lista con ID: ", orderDoc.id);
 }

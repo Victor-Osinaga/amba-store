@@ -1,15 +1,13 @@
 /* nav */
 :root {
-  --navHeight: 69.8px;
+  --navHeight: 81px;
   --colorMain: #96305A;
 }
 
 #nav {
-  /* background-color: red; */
   background-color: rgba(0,0,0,0.5);
   width: 100%;
-  /* height: var(--navHeight); */
-  /* background: transparent; */
+  max-height: var(--navHeight);
   position: fixed;
   top: 0;
   z-index: 6;
@@ -17,11 +15,9 @@
 }
 
 .nav__Container {
-  /* background: rgba(0,0,0,0.9); */
   max-width: 80vw;
   padding: 0 0 5px;
   height: 100%;
-  /* background-color: green; */
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -44,8 +40,6 @@
   animation-duration: 1.5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  /* height: 100%; */
-  /* background-color: gray; */
 }
 
 .nav__LogoSvgContainer:hover {
@@ -55,9 +49,6 @@
 
 
 #nav__LogoSvg {
-  /* color: white; */
-  /* background-color: red; */
-  /* animation: spin infinite 20s linear; */
   width: 2.5rem;
 }
 
