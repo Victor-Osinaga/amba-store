@@ -2,34 +2,34 @@ import React /*, { useContext } */from "react";
 import useCartContext from '../store/CartContext';
 import { Link } from 'react-router-dom';
 import '../css/CartView.css';
-import { createBuyOrder } from '../firebase/firebaseConfig';
+// import { createBuyOrder } from '../firebase/firebaseConfig';
 
 function CartView() {
   const { cart, removeFromCart, cleanCart, calcPriceCart } = useCartContext();
   console.log("Cart", cart);
 
-  function handleBuy() {
-    const itemsToBuy = cart.map( (item)=> ({
-      titulo: item.titulo,
-      cant: item.cant,
-      precio: item.precio,
-      id: item.id
-      }
-    ))
+  // function handleBuy() {
+  //   const itemsToBuy = cart.map( (item)=> ({
+  //     titulo: item.titulo,
+  //     cant: item.cant,
+  //     precio: item.precio,
+  //     id: item.id
+  //     }
+  //   ))
 
-    const buyOrder = {
-      buyer: {
-        name: "Victor",
-        phone: "123456789",
-        email: "victor@coder.com"
-      },
-      items: itemsToBuy,
-      total: calcPriceCart()
-    }
+  //   const buyOrder = {
+  //     buyer: {
+  //       name: "Victor",
+  //       phone: "123456789",
+  //       email: "victor@coder.com"
+  //     },
+  //     items: itemsToBuy,
+  //     total: calcPriceCart()
+  //   }
 
-    createBuyOrder(buyOrder);
-    cleanCart();
-  }
+  //   createBuyOrder(buyOrder);
+  //   cleanCart();
+  // }
 
   if (cart.length === 0) {
     return(
@@ -61,9 +61,9 @@ function CartView() {
                     </div>
           })}
           <div className="infoFinal">
+          <h3 className="precioFinal">Total: ${calcPriceCart()}</h3>
             <button className="btnVaciarCarrito" onClick={cleanCart}>Vaciar carrito</button>
-            <h3 className="precioFinal">Total: ${calcPriceCart()}</h3>
-            <button onClick={handleBuy} className="btnComprar"><b>¡COMPRAR!</b></button>
+            <Link to='/checkout'> <button className="btnComprar"><b>Checkout</b></button> </Link>
           </div>
         </div>
       </section>

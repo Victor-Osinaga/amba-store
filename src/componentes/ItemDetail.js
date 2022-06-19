@@ -17,8 +17,14 @@ function ItemDetail( {producto} ) {
     console.log("agregado al cart: ", producto, count)
   }
 
+  function seguirComprando(){
+    setIsInCart(false);
+  }
+
   if (!producto){
-    return <h4>Cargando...</h4>
+    return (
+      <h4>Cargando...</h4>
+    )
   }else{
     return (
       <section className='itemDetail'>
@@ -28,12 +34,15 @@ function ItemDetail( {producto} ) {
         </div>
         <div className='itemDetailRight'>
           <h2 className='itemDetailTitulo'>{producto.titulo}</h2>
-          <p className='itemDetailPrecio'>Precio: ${producto.precio}</p>
-          <h4 className='itemDetailStock'>Stock: {producto.stock}</h4>
+          <h4 className='itemDetailPrecio'>${producto.precio}</h4>
+          <p className='itemDetailStock'>Stock: {producto.stock}</p>
           <p className='itemDetailDescripcion'>{producto.descripcion}</p>
           
           { isInCart ?
-            <Link to="/cart">Ir al carrito</Link>
+            <div className='actionsContainer'>
+              <Link className='toCart' to="/cart">Ir al carrito</Link>
+              <p className='seguirComprando' onClick={seguirComprando}>Comprar más!</p>
+            </div>
            :  
             <ItemCount
               onAdd={onAdd}

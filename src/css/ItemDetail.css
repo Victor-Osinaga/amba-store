@@ -1,15 +1,13 @@
 .itemDetail{
   min-height: calc(100vh - var(--navHeight));
-  /* height: 100vh; */
   max-width: 95vw;
-  padding: 20px 20px;
+  padding: 0px 20px 10px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   background: white;
   align-items: center;
   justify-content: center;
-  /* margin-bottom: 20px; */
 }
 
 .itemDetail h3 {
@@ -19,7 +17,6 @@
 .itemDetail .itemDetailLeft {
   grid-column: span 2;
   box-shadow: .5px 0px #96305A;
-  /* background-color: red; */
 }
 
 .itemDetail .itemDetailImg {
@@ -36,6 +33,40 @@
   grid-column: span 3;
 }
 
+.itemDetailPrecio {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.seguirComprando {
+  padding: 8px 15px;
+  background-color: rgb(0, 93, 180);
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.seguirComprando:hover {
+  cursor: pointer;
+}
+
+.toCart {
+  border-radius: 5px;
+  padding: 8px 15px;
+  background: #732D4D;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.actionsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
 @media screen and (max-width: 767px) {
    .itemDetail{
     grid-template-columns: 1fr;
@@ -47,10 +78,9 @@
 
   .itemDetail .itemDetailLeft {
     grid-column: span 1;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     box-shadow: 0px .5px #96305A;
-    margin-bottom: 20px;
-    /* background-color: red; */
+    margin-bottom: 0px;
   }
 
   .itemDetail .itemDetailImg {
@@ -61,6 +91,12 @@
   .itemDetail .itemDetailRight {
     padding-left: 0px;
     grid-column: span 1;
+    gap: 5px;
     /* background-color: red; */
   }
+
+  .itemDetailPrecio {
+    font-size: 1.5rem;
+  }
+  
 }

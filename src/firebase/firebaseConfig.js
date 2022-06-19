@@ -77,6 +77,15 @@ export async function createBuyOrder(orderData){
   const miColec = collection(firestoreDB, "buyOrders");
   const orderDoc = await addDoc(miColec, orderWithDate);
   
-  alert(`Gracias por tu compra su ID es: ${orderDoc.id}`);
+  // alert(`Gracias por tu compra su ID es: ${orderDoc.id}, y su mail es: ${orderDoc.email}`);
   console.log("Orden lista con ID: ", orderDoc.id);
+  function modal (){
+    let content = document.getElementById('content');
+    let checkoutContainer = document.querySelector('.checkoutFormContainer');
+    checkoutContainer.style.display = 'none';
+    return(
+      content.innerHTML = `<div>Gracias por tu compra su ID es: <strong>${orderDoc.id}</strong>, y su mail es: ${orderDoc.email}</div>`
+    )
+  }
+  modal();
 }

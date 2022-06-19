@@ -217,9 +217,9 @@
 }
 
 @media screen and (max-width: 767px) {
-  /* :root {
-    --navHeight: 40px;
-  } */
+  :root {
+    --navHeight: 70px;
+  }
 
   .nav__MenuSvgContainer {
     display: flex;

@@ -23,12 +23,10 @@ function NavBar(){
     <Categorias /> 
       <div className='nav__Container'>
         <Link className='nav__LogoSvgContainer' to={'/'}>
-          {/* <div className='noRotate'></div> */}
           <img id='nav__LogoSvg' src={logo}/>
         </Link>
         <form className="nav__FormContainer">
           <FaSistrix className='searchIco'/>
-          {/* <i><img id='nav__SearchSvg' src={searchSvg}/></i> */}
           <input type="search" id="nav__Input" placeholder="Buscar..." />
         </form>
         <Link to="/cart"> <CartWidget /> </Link>
@@ -37,7 +35,7 @@ function NavBar(){
             }>
           <li><Link to='/'>Inicio</Link></li>
           <li className='submenu__container'>
-            <a href='#productos'>Productos</a>
+            <Link to='/'>Productos</Link>
             <ul className='submenu'>
               <li><a href='#'>Ojos</a></li>
               <li><a href='#'>Uñas</a></li>
@@ -53,7 +51,6 @@ function NavBar(){
             }}>
           <i>
             <AiOutlineMenu id='nav__MenuSvg' className='nav__MenuSvg'/>
-            {/* <img id='nav__MenuSvg' className='nav__MenuSvg' src={navMenuSvg}/> */}
           </i>
         </div>
       </div>

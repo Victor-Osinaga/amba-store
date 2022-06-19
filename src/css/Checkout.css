@@ -1,0 +1,74 @@
+.checkout {
+  margin-top: calc(var(--navHeight) + 10px);
+  min-height: calc(85vh - var(--navHeight));
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 150px; */
+}
+
+.checkoutFormContainer {
+  /* margin-top: 150px; */
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 15px 25px;
+  background-color: white;
+  gap: 15px;
+  border-radius: 5px;
+}
+
+form .grupo {
+  position: relative;
+  margin: 15px;
+  text-align: left;
+}
+
+.checkInput {
+  background: none;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1.5px solid #732D4D;
+}
+
+.checkInput:focus{
+  outline: none;
+  color: rgb(94, 93, 93);
+}
+
+.checkInput:focus~label {
+  position: absolute;
+  top: -15px;
+  color: #2196F3;
+  /* color: #732D4D; */
+  font-size: 0.85rem;
+}
+
+.checkLabel {
+  color: gray;
+  font-size: 1rem;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  transition: all ease .5s;
+  pointer-events: none;
+}
+
+.btnForm {
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .checkoutFormContainer {
+    width: 80%;
+  }
+}
