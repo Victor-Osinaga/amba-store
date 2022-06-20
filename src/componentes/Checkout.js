@@ -7,6 +7,12 @@ function Checkout(){
   const { cart, cleanCart, calcPriceCart } = useCartContext();
 
   function handleBuy() {
+    // event.preventDefault();
+    // console.log("submission prevented");
+  // let btnComprar = document.querySelector('.btnComprar');
+  // btnComprar.addEventListener('click', (e)=>{
+  //   e.preventDefault();
+  // })
     let nombre = document.getElementById('name').value;
     let mail = document.getElementById('email').value;
     let celular = document.getElementById('celular').value;
@@ -38,10 +44,15 @@ function Checkout(){
     celular.value = "";
     envio.value = "";
   }
+  const prevent = (event) => {
+    event.preventDefault();
+    console.log("submission prevented");
+    handleBuy();
+  };
 
   return(
     <section className="checkout">
-      <form className="checkoutFormContainer">
+      <form onSubmit={prevent} className="checkoutFormContainer">
         <h2>Formulario de Contacto</h2>
         <div className="grupo">
           <input className="checkInput" type="text" name="name" id="name" required />
@@ -60,7 +71,7 @@ function Checkout(){
           <label className="checkLabel">Dirección de envio</label>
         </div>
         <div>
-          <input type="submit" value="¡COMPRAR!" className="btnComprar" onClick={handleBuy} required />
+          <input type="submit" value="¡COMPRAR!" className="btnComprar"  />
         </div>
       </form>
       <div id="content"></div>
