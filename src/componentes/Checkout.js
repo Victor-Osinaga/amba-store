@@ -7,12 +7,7 @@ function Checkout(){
   const { cart, cleanCart, calcPriceCart } = useCartContext();
 
   function handleBuy() {
-    // event.preventDefault();
-    // console.log("submission prevented");
-  // let btnComprar = document.querySelector('.btnComprar');
-  // btnComprar.addEventListener('click', (e)=>{
-  //   e.preventDefault();
-  // })
+
     let nombre = document.getElementById('name').value;
     let mail = document.getElementById('email').value;
     let celular = document.getElementById('celular').value;
@@ -39,14 +34,13 @@ function Checkout(){
 
     createBuyOrder(buyOrder);
     cleanCart();
-    nombre.value = "";
-    mail.value = "";
-    celular.value = "";
-    envio.value = "";
+    // nombre.value = "";
+    // mail.value = "";
+    // celular.value = "";
+    // envio.value = "";
   }
   const prevent = (event) => {
     event.preventDefault();
-    console.log("submission prevented");
     handleBuy();
   };
 

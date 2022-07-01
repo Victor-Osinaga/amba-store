@@ -4,7 +4,6 @@ import {
   doc, 
   getDoc, 
   query, 
-  setDoc,
   addDoc,
   where, 
   collection,
@@ -29,7 +28,6 @@ export default firestoreDB;
 
 export async function getAllItems() {
   const miColec = collection(firestoreDB, 'products')
-  // getDocs(miColec).then(result => console.log(result))
   const productosSnap = await getDocs(miColec);
   
   return productosSnap.docs.map(doc => {
@@ -78,14 +76,12 @@ export async function createBuyOrder(orderData){
   const miColec = collection(firestoreDB, "buyOrders");
   const orderDoc = await addDoc(miColec, orderWithDate);
   
-  // alert(`Gracias por tu compra su ID es: ${orderDoc.id}, y su mail es: ${orderDoc.email}`);
-  console.log("Orden lista con ID: ", orderDoc.id);
   function modal (){
     let content = document.getElementById('content');
     let checkoutContainer = document.querySelector('.checkoutFormContainer');
     checkoutContainer.style.display = 'none';
     return(
-      content.innerHTML = `<div>Gracias por tu compra su ID es: <strong>${orderDoc.id}</strong>, y su mail es: ${orderDoc.email}</div>`
+      content.innerHTML = `<div>Gracias por tu compra su ID es: <strong>${orderDoc.id}</strong>.</div>`
     )
   }
   modal();

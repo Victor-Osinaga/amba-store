@@ -7,19 +7,6 @@ const useCartContext = () => useContext(CartContext);
 
 const { Provider } = CartContext;
 
-// REALIZAR LAS SIGUIENTES FUNCIONALIDADES:
-// cantInCart
-// calcPriceCart
-
-//* Guardar en el estado los items que agreguemos al cart
-//* 0_ necesitamos un ESTADO para guardar los items
-//* 1_ agregar items al carrito
-//* 2_ eliminar items del estado del carrito
-//! 3_ limpiar TODO el carrito
-//! 4_ comprobar si X item esta en el carrito
-//! 5_ devolver la cantidad de items en el carrito
-//! 6_ devolver el precio final de la compra
-
 export function CartContextProvider({ children }){
   const [cart, setCart] = useState([]);
 
@@ -61,11 +48,8 @@ export function CartContextProvider({ children }){
     return cart.find( itemCart => itemCart.id === id )
   }
 
-  const contextFunction = () => console.log("contexto listo!");
-
   const cantInCart = () => {
     let total = 0;
-  /* forEach del cart y ir sumando al "total" la cantidad de este item*/
    cart.forEach(itemCart => {
     total += itemCart.cant
   }) 
@@ -81,7 +65,7 @@ export function CartContextProvider({ children }){
   }
   
   return (
-    <Provider value = { { contextFunction, cantInCart, calcPriceCart, cleanCart, getItemFromCart, cart, addToCart, removeFromCart } }>
+    <Provider value = { { cantInCart, calcPriceCart, cleanCart, getItemFromCart, cart, addToCart, removeFromCart } }>
       {children}
     </Provider>
   )

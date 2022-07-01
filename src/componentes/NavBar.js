@@ -13,8 +13,8 @@ import useCartContext from '../store/CartContext';
 
 function NavBar(){
 
-  const { contextFunction } = useCartContext();
-  contextFunction();
+  // const { contextFunction } = useCartContext();
+  // contextFunction();
 
   const [navVisible, setNavVisible] = useState(false);
 

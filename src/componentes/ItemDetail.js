@@ -11,10 +11,8 @@ function ItemDetail( {producto} ) {
   const { addToCart } = useCartContext();
 
   function onAdd(count){
-    console.log(`agregaste al carrito ${count} items`);
     setIsInCart(true);
     addToCart(producto, count);
-    console.log("agregado al cart: ", producto, count)
   }
 
   function seguirComprando(){

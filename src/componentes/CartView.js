@@ -1,35 +1,10 @@
-import React /*, { useContext } */from "react";
+import React from "react";
 import useCartContext from '../store/CartContext';
 import { Link } from 'react-router-dom';
 import '../css/CartView.css';
-// import { createBuyOrder } from '../firebase/firebaseConfig';
 
 function CartView() {
   const { cart, removeFromCart, cleanCart, calcPriceCart } = useCartContext();
-  console.log("Cart", cart);
-
-  // function handleBuy() {
-  //   const itemsToBuy = cart.map( (item)=> ({
-  //     titulo: item.titulo,
-  //     cant: item.cant,
-  //     precio: item.precio,
-  //     id: item.id
-  //     }
-  //   ))
-
-  //   const buyOrder = {
-  //     buyer: {
-  //       name: "Victor",
-  //       phone: "123456789",
-  //       email: "victor@coder.com"
-  //     },
-  //     items: itemsToBuy,
-  //     total: calcPriceCart()
-  //   }
-
-  //   createBuyOrder(buyOrder);
-  //   cleanCart();
-  // }
 
   if (cart.length === 0) {
     return(
