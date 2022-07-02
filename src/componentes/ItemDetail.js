@@ -26,7 +26,7 @@ function ItemDetail( {producto} ) {
   }else{
     return (
       <section className='itemDetail'>
-        <h3>Item Detail</h3>
+        <h3>Detalle del producto</h3>
         <div className='itemDetailLeft'>
           <img className='itemDetailImg' src={producto.img} type='image/jpeg' alt='foto' />
         </div>

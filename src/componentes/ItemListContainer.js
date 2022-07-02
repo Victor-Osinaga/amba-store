@@ -24,8 +24,8 @@ function ItemListContainer( {titulo} ){
 
   return (
     <div className="ItemListContainer">
-      <h2 id='productos'>ItemListContainer</h2>
-      <h1><b>{titulo}{categoryid}</b></h1>
+      {/* <h2 id='productos'><b>{titulo}</b></h2> */}
+      <h1 className="itemListContainer__title"><b>{titulo}{categoryid}</b></h1>
       <ItemList 
         productos={productos}
       />

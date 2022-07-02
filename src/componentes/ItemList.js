@@ -5,7 +5,6 @@ import '../css/ItemList.css';
 function ItemList( { productos } ) {
   return(
     <div className='itemList'>
-      <h1 className='titleItemList'>ItemList</h1>
       { productos.map(producto => {
         return(
             <Item producto={producto} key={producto.id} />

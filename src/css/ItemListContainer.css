@@ -2,33 +2,6 @@
   margin-top: var(--navHeight);
 }
 
-/* .ItemListContainer {
-  background-color: blue;
-  max-width: 90vw;
-  margin: 0 auto;
-  padding: 15px 0;
-  color: black;
-  gap: 15px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-} */
-
-/* .ItemListContainer {
-  display: grid;
-  flex-wrap: wrap;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
+.itemListContainer__title {
+  font-size: 2rem;
 }
-
-@media screen and (max-width: 767px) {
-  .ItemListContainer {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .ItemListContainer {
-    grid-template-columns: 1fr;
-  }
-} */

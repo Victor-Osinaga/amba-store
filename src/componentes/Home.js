@@ -8,7 +8,7 @@ function Home () {
         <div className="home__background"></div>
       </section>
       <section>
-        <ItemListContainer  titulo = 'Hola desde react router'/>
+        <ItemListContainer  titulo = 'Productos'/>
       </section>
     </section>
     
