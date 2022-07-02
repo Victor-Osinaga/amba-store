@@ -10,8 +10,8 @@ function Item( {producto} ) {
       <div className='itemImgContainer'>
         <img className='itemImg' src={producto.img} type='image/jpeg' alt={producto.titulo} />
       </div>
-      <p className='itemPrecio'>Precio: ${producto.precio}</p>
-      <h4 className='itemStock'>Stock: {producto.stock}</h4>
+      <p className='itemStock'>Stock: {producto.stock}</p>
+      <h4 className='itemPrecio'>Precio: ${producto.precio}</h4>
       <Link to={`/producto/${producto.id}`}>
         <button className='btn__vermas'>Ver mas</button>
       </Link>
