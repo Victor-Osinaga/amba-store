@@ -12,12 +12,12 @@ import {
 } from 'firebase/firestore/lite'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCWno7SsJVi2LMXdyOhNxHjqNJikAnUD6k",
-  authDomain: "amba-store.firebaseapp.com",
-  projectId: "amba-store",
-  storageBucket: "amba-store.appspot.com",
-  messagingSenderId: "227916881924",
-  appId: "1:227916881924:web:5cb7bd9aeb8b55be63d551"
+  apiKey: process.env.REACT_APP_FIREBASE_apiKey,
+  authDomain: process.env.REACT_APP_FIREBASE_authDomain,
+  projectId: process.env.REACT_APP_FIREBASE_projectId,
+  storageBucket: process.env.REACT_APP_FIREBASE_storageBucket,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_messagingSenderId,
+  appId: process.env.REACT_APP_FIREBASE_appId
 };
 
 // Initialize Firebase

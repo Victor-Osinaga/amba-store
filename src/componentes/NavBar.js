@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import logo from '../imagenes/corona.png';
 import '../css/NavBar.css';
 import { FaSistrix } from 'react-icons/fa';
@@ -8,13 +8,7 @@ import CartWidget from './CartWidget';
 import Categorias from './Categorias';
 import { Link } from 'react-router-dom';
 
-import useCartContext from '../store/CartContext';
-
-
 function NavBar(){
-
-  // const { contextFunction } = useCartContext();
-  // contextFunction();
 
   const [navVisible, setNavVisible] = useState(false);
 
@@ -23,7 +17,7 @@ function NavBar(){
     <Categorias /> 
       <div className='nav__Container'>
         <Link className='nav__LogoSvgContainer' to={'/'}>
-          <img id='nav__LogoSvg' src={logo}/>
+          <img id='nav__LogoSvg' src={logo} alt='logo' />
         </Link>
         <form className="nav__FormContainer">
           <FaSistrix className='searchIco'/>
@@ -36,14 +30,14 @@ function NavBar(){
           <li><Link to='/'>Inicio</Link></li>
           <li className='submenu__container'>
             <Link to='/'>Productos</Link>
-            <ul className='submenu'>
+            {/* <ul className='submenu'>
               <li><a href='#'>Ojos</a></li>
               <li><a href='#'>Uñas</a></li>
               <li><a href='#'>Rostro</a></li>
               <li><a href='#'>Labiales</a></li>
-            </ul>
+            </ul> */}
           </li>
-          <li><a href='#'>Contacto</a></li>
+          {/* <li><a href='#'>Contacto</a></li> */}
         </ul>
         <div id='nav__MenuSvgContainer' className='nav__MenuSvgContainer'
             onClick={() => {
