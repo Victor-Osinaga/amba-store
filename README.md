@@ -1,4 +1,4 @@
-# Tienda de productos hecha en React como proyecto final del curso de React de Coder House
+# Tienda de productos desarrollada en React
 
 ##Se utilizo:
 React icons
